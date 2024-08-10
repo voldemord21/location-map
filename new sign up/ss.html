@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+
+<body>
+    <div class="main">
+        <img src="user.webp" class="img" height="80px" width="80px">
+        <h1 class="head">Sign Up</h1>
+        <form action="">
+            <input type="text" class="input" placeholder="Full Name">
+            <input type="email" class="input" placeholder="Your Email">
+            <input type="password" class="input" placeholder="Your Password">
+            <p>Upoad your identity</p>
+            <input type="file" class="input" accept="image/*">
+            <p><span><input type="checkbox"></span> I agree to the terms of service</p>
+            <button type="button" class="button" id="but">Sign up</button>
+            <hr>
+            <p class="or">OR</p>
+            <button type="button" class="button">Login with Fb</button>
+            <p>Do you have an account? <a href="#" class="a">Sign in</a></p>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+     var success = document.getElementById('but');
+success.addEventListener('click', function() {
+    Swal.fire({
+        title: 'Success!',
+        text: 'Your operation was successful.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'ss.html'; // Change 'index.html' to your home page URL
+        }
+    });
+});
+
+
+    </script>
+</body>
+</html>
